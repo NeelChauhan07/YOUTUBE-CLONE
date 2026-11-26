@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <i class="fa-brands fa-youtube"></i>
+        <span>YouTube</span>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+               placeholder="Search videos...">
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <div class="user">
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-user-circle"></i>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <div class="menu active" data-query="trending videos">
+        <i class="fa-solid fa-house"></i> Home
+    </div>
+    <div class="menu" data-query="trending music">
+        <i class="fa-solid fa-fire"></i> Trending
+    </div>
+    <div class="menu" data-query="music">
+        <i class="fa-solid fa-music"></i> Music
+    </div>
+    <div class="menu" data-query="gaming">
+        <i class="fa-solid fa-gamepad"></i> Gaming
+    </div>
+    <div class="menu" data-query="technology">
+        <i class="fa-solid fa-laptop"></i> Technology
+    </div>
+    <div class="menu" data-query="education">
+        <i class="fa-solid fa-book"></i> Education
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <div class="categories">
+        <button class="chip selected" data-query="trending videos">All</button>
+        <button class="chip" data-query="music">Music</button>
+        <button class="chip" data-query="gaming">Gaming</button>
+        <button class="chip" data-query="coding tutorials">Coding</button>
+        <button class="chip" data-query="technology">Technology</button>
+        <button class="chip" data-query="comedy">Comedy</button>
+        <button class="chip" data-query="education">Education</button>
+    </div>
+
+    <h2 id="heading">Recommended Videos</h2>
+
+    <div id="videoContainer" class="video-grid">
+        <p>Loading videos...</p>
+    </div>
+
+</main>
+
+<!-- Video Player -->
+<div id="playerModal" class="modal">
+    <div class="player-box">
+        <button id="closePlayer" class="close-btn">✕</button>
+        <iframe id="videoPlayer"
+            src=""
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
